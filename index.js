@@ -10,7 +10,7 @@ import { appendContent, clearContent } from "./ui";
         axios.get("https://randomuser.me/api/?results=10&fbclid=IwAR2dlRZ20VGvaqf3RqR3PW1PGFQ_-R4-vpSUs5dYMmO6avmLOGGgdbMvMPw")
         .then((response) => {
             console.log(response)
-            appendContent(response.data.results[0].name.first, response.data.results[0].picture.medium);
+            appendContent(response.data.results[0].name.first + " " + response.data.results[0].name.last, response.data.results[0].picture.large);
             console.log("hello world")
         })
         .catch((error) => {
